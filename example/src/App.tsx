@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'login-module';
+import { StyleSheet, View, Text, Alert } from 'react-native';
+import { MyButton } from 'login-module';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  // const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  // React.useEffect(() => {
+  //   // multiply(300, 70).then(setResult);
+  // }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      {/* <Text>Result: {result}</Text> */}
+      <MyButton
+        label={'CLIQUE-ME'}
+        onPress={() => Alert.alert('Ola', 'Estou alertando sobre algo')}
+      />
     </View>
   );
 }

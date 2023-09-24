@@ -155,5 +155,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "http-module": "github:matos-claudio/http-module"
   }
 }
